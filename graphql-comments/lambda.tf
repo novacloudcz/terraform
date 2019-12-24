@@ -21,3 +21,14 @@ resource "aws_lambda_function" "lambda" {
 
   tags = "${var.tags}"
 }
+
+data "aws_lambda_invocation" "example" {
+  function_name = "${aws_lambda_function.lambda.function_name}"
+
+  input = <<JSON
+{
+  "path": "/migrate",
+  "httpMethod": "GET"
+}
+JSON
+}
