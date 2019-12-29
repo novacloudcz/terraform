@@ -31,4 +31,6 @@ data "aws_lambda_invocation" "example" {
   "httpMethod": "GET"
 }
 JSON
+
+  depends_on = ["aws_lambda_function.lambda"]
 }
