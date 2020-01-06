@@ -42,6 +42,19 @@ resource "aws_iam_policy" "lambda_logging" {
         "Effect": "Allow",
         "Action": "lambda:InvokeFunction",
         "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords",
+        "xray:GetSamplingRules",
+        "xray:GetSamplingTargets",
+        "xray:GetSamplingStatisticSummaries"
+      ],
+      "Resource": [
+        "*"
+      ]
     }
   ]
 }
