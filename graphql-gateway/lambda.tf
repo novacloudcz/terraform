@@ -15,4 +15,8 @@ resource "aws_lambda_function" "lambda" {
   }
 
   tags = "${var.tags}"
+
+  tracing_config {
+    mode = "${var.tracing_config}"
+  }
 }

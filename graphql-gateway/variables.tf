@@ -11,3 +11,8 @@ variable "environment_variables" {
 variable "tags" {
   default = {}
 }
+
+variable "tracing_config" {
+  default="PassThrough"
+}
+
