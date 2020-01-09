@@ -1,7 +1,7 @@
 variable "name" {}
 
 variable "lambda_version" {
-  default = "v0.1.0"
+  default = "v0.1.2"
 }
 
 variable "environment_variables" {
