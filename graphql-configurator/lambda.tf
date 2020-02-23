@@ -28,7 +28,13 @@ data "aws_lambda_invocation" "example" {
   input = <<JSON
 {
   "path": "/migrate",
-  "httpMethod": "GET"
+  "httpMethod": "GET",
+  "pathParameters":{
+    "proxy":"/migrate"
+  },
+  "requestContext":{
+    "accountId":"dummy"
+  }
 }
 JSON
 
