@@ -1,6 +1,6 @@
 resource "aws_lambda_function" "lambda" {
   s3_bucket     = "novacloud-lambda-functions"
-  s3_key        = "github.com/graphql-services/graphql-configurator/lambda-${var.lambda_version}.zip"
+  s3_key        = "github.com/graphql-services/graphql-configurator/${var.lambda_version}/lambda.zip"
   function_name = "${var.name}"
 
   role        = "${var.role}"
