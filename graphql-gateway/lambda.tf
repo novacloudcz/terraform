@@ -8,7 +8,7 @@ resource "aws_lambda_function" "lambda" {
   runtime     = "nodejs12.x"
   publish     = true
   timeout     = 30
-  memory_size = 1024
+  memory_size = 4096
 
   environment {
     variables = var.environment_variables
