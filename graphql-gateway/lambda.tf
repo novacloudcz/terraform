@@ -5,7 +5,7 @@ resource "aws_lambda_function" "lambda" {
 
   role        = aws_iam_role.lambda_exec.arn
   handler     = "lambda.handler"
-  runtime     = "nodejs12.x"
+  runtime     = "nodejs14.x"
   publish     = true
   timeout     = 30
   memory_size = 4096
